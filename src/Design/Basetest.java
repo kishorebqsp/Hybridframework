@@ -6,14 +6,12 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 public class Basetest implements Constant {
-	static {
-		System.setProperty(chromekey,chromevalue);
-	}
+
 	public WebDriver driver;
 	@BeforeMethod
 	public void openapp()
 	{
-//System.setProperty(chromekey,chromevalue);
+System.setProperty(chromekey,chromevalue);
 driver=new ChromeDriver();
 String u = Propertyfile.pfile(propertyfilepath,"url");
 driver.get(u);
